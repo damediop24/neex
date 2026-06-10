@@ -20,7 +20,7 @@ class PyroConf(object):
     API_ID = 24363932
     API_HASH = "d84176e864496c3cd2542c1a0de42c4a"
     BOT_TOKEN = "8624313001:AAF0SVVtQshRHxY3nkk-91qHsza89Q9yXEE"
-    SESSION_STRING = getenv("SESSION_STRING")  # Set this in Heroku Config Vars (or config.env) - must be a fresh valid string
+    SESSION_STRING = "AQFzw5wAGGrmlTl7xzO7I6n35jW_mC8Po7dF0KLVaMNrUg4BLKBOeWG8SCqDPjLBZwS3H2Fr6VxvwZaYwNwaCpEixVfaVwDyzPXh2Jcq0L8E7GcVJZyk0-U4VCTQKJhU5C0ELjuzFEbHmqyk-LuFBtjEDsWGj8ugYK4xv1r1JfM-5Rje_bCLkwUinpstHZUVxBoh29NdlZGsKvL4ijvGfkENTY0VR3RgojYjMXQrIm1AfsPcRxecFNuoGjjwCICV_vWglQ4q91bpJdvaCdLFlbCQ25S_Y9yggJmwMkKbJPyB1qbgXWKNnk9QBRlZsaPl4Y-SpWwLMuzfJHzb3xWIHqo3oKe9MAAAAAICDJKpAQ"  # User-provided session string (hardcoded per request)
     BOT_START_TIME = time()
 
     MAX_CONCURRENT_DOWNLOADS = 1
