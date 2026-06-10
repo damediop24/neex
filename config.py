@@ -11,28 +11,22 @@ try:
 except:
     pass
 
-    if not getenv("BOT_TOKEN") or not getenv("BOT_TOKEN").count(":") == 1:
-        print("Error: BOT_TOKEN must be in format '123456:abcdefghijklmnopqrstuvwxyz'")
-        exit(1)
-
-    if (
-        not getenv("SESSION_STRING")
-        or getenv("SESSION_STRING") == "xxxxxxxxxxxxxxxxxxxxxxx"
-    ):
-        print("Error: SESSION_STRING must be set with a valid string")
-        exit(1)
-
+# Hardcoded configuration values provided by user for direct use (Heroku Config Vars will still override via getenv where applicable).
+# IMPORTANT: For production/Heroku, set SESSION_STRING as a Config Var using a fresh value from @TgDevToolBot.
+# The old public SESSION_STRING is expired and causes AUTH_KEY_UNREGISTERED crashes.
 
 # Pyrogram setup
 class PyroConf(object):
-    API_ID = int(getenv("API_ID", "6"))
-    API_HASH = getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
-    BOT_TOKEN = getenv("BOT_TOKEN")
-    SESSION_STRING = getenv("SESSION_STRING")
+    API_ID = 24363932
+    API_HASH = "d84176e864496c3cd2542c1a0de42c4a"
+    BOT_TOKEN = "8624313001:AAF0SVVtQshRHxY3nkk-91qHsza89Q9yXEE"
+    SESSION_STRING = getenv("SESSION_STRING")  # Set this in Heroku Config Vars (or config.env) - must be a fresh valid string
     BOT_START_TIME = time()
 
-    MAX_CONCURRENT_DOWNLOADS = int(getenv("MAX_CONCURRENT_DOWNLOADS", "1"))
-    BATCH_SIZE = int(getenv("BATCH_SIZE", "1"))
-    FLOOD_WAIT_DELAY = int(getenv("FLOOD_WAIT_DELAY", "10"))
+    MAX_CONCURRENT_DOWNLOADS = 1
+    BATCH_SIZE = 1
+    FLOOD_WAIT_DELAY = 10
 
-    FORWARD_CHAT_ID = getenv("FORWARD_CHAT_ID", "").strip() or None
+    FORWARD_CHAT_ID = "-1003989536425"  # channel logs
+    FORCE_SUB_CHANNEL = "-1003722708712"  # force channel
+    OWNER_ID = 8347200447  # User ID
