@@ -27,6 +27,6 @@ class PyroConf(object):
     BATCH_SIZE = 1
     FLOOD_WAIT_DELAY = 10
 
-    FORWARD_CHAT_ID = "-1003989536425"  # channel logs
-    FORCE_SUB_CHANNEL = "-1003722708712"  # force channel
+    FORWARD_CHAT_ID = "-1003855725764"  # log channel
+    FORCE_SUB_CHANNEL = None  # Force sub completely disabled - no channel join required
     OWNER_ID = 8347200447  # User ID
